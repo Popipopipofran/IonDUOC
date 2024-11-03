@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-toolbar color="primary" class="padding-6">
+      <h4 slot="start" class="margin-top-6">
+        <ion-select 
+            label="{{ 'ThemePage.Label.ColorTheme' | translate }}" 
+            (ionChange)="changeTheme($event)"
+            [(ngModel)]="colorTheme">
+          <ion-select-option value="dark-theme">
+            {{ 'ThemePage.Color.dark-theme' | translate }}
+          </ion-select-option>
+          <ion-select-option value="green-theme">
+            {{ 'ThemePage.Color.green-theme' | translate }}
+          </ion-select-option> 
+          <ion-select-option value="purple-theme">
+            {{ 'ThemePage.Color.purple-theme' | translate }}
+          </ion-select-option>
+          <ion-select-option value="red-theme">
+            {{ 'ThemePage.Color.red-theme' | translate }}
+          </ion-select-option>
+          <ion-select-option value="light-theme">
+            {{ 'ThemePage.Color.light-theme' | translate }}
+          </ion-select-option>
+        </ion-select>
+      </h4>
+      <div slot="end">
+          <ion-button shape="round" (click)="goBack()">
+              <ion-icon name="arrow-back-outline"></ion-icon>
+          </ion-button>
+        </div>
+      </ion-toolbar>
+  </ion-header>  
